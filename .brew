@@ -18,7 +18,7 @@ printf "\n${GREEN}Homebrew installed and up to date!${NORMAL}\n"
 # Installing packages from brew
 printf "\n${YELLOW}Installing Homebrew packages...${NORMAL}\n"
 PACKAGES=(
-  go
+  golang
   jq
   tree
   watchman
