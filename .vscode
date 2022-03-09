@@ -1,0 +1,23 @@
+#!/bin/bash
+
+export $(grep -v '^#' .colors | xargs)
+
+
+# Copy VS Code user settings
+printf "${BLUE}Copying VS Code user settings...${NORMAL}\n\n"
+cp ./vscode/settings.json ~/Library/Application\ Support/Code/User
+
+# Install vscode extensions from the list in extensions.txt
+printf "${BLUE}Installing VS Code extensions...${NORMAL}\n"
+if test $(which code); then
+  filename="./vscode/extensions"
+  while read -r line;
+  do
+    printf "${YELLOW}Installing VS Code extension %s...${NORMAL}\n" "$line"
+    code --install-extension $line > /dev/null
+    sleep 0.5
+  done < "$filename"
+fi
+
+
+
