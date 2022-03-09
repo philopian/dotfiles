@@ -1,0 +1,33 @@
+#!/bin/bash
+
+export $(grep -v '^#' .colors | xargs)
+
+# Make main the default branch for git
+printf "\n${YELLOW}Make main the default branch for git...${NORMAL}\n"
+git config --global init.defaultBranch main
+
+
+# Use Zsh
+printf "\n${YELLOW}Set Zsh as default...${NORMAL}\n"
+if [ $(echo $SHELL) != "/bin/zsh" ]; then
+    chsh -s `which zsh`;
+fi
+
+
+# Install oh-my-zsh
+printf "\n${YELLOW}Installing Oh My Zsh...${NORMAL}\n"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --skip-chsh"
+cd ~/dotfiles
+
+# Fix "insecure directories" warning
+sudo chmod -R 755 ~/.oh-my-zsh
+
+
+# links
+cp ~/dotfiles/zshrc $HOME/.zshrc
+ln -sf ~/dotfiles/.zsh_aliases $HOME/.zsh_aliases
+ln -sf ~/dotfiles/.zsh_functions $HOME/.zsh_functions
+
+
+git config --global user.email "philopian@gmail.com"
+git config --global user.name "Phil Willis"
