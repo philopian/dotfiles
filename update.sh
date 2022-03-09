@@ -8,9 +8,8 @@ UPDATING Configs
 ==============================================================================${NORMAL}\n"
 
 
-printf "${BLUE}Overide `~/.zshrc` with `~/dotfiles/zshrc`...${NORMAL}\n"
+printf "${BLUE}Overide ~/.zshrc with ~/dotfiles/zshrc...${NORMAL}\n"
 cp ~/dotfiles/zshrc $HOME/.zshrc
-source ~/.zshrc
 
 
 # Install vscode extensions from the list in extensions.txt
@@ -24,3 +23,6 @@ if test $(which code); then
     code --install-extension $line > /dev/null
   done < "$filename"
 fi
+
+
+source ~/.zshrc
