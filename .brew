@@ -1,0 +1,74 @@
+#!/bin/bash
+
+export $(grep -v '^#' .colors | xargs)
+
+# Install Homebrew (if not already installed)
+if test ! $(which brew); then
+  printf "${YELLOW}Installing Homebrew...${NORMAL}\n"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+
+# Updating brew (if out of date)
+printf "\n${YELLOW}Updating homebrew...${NORMAL}\n"
+brew update
+printf "\n${GREEN}Homebrew installed and up to date!${NORMAL}\n"
+
+
+# Installing packages from brew
+printf "\n${YELLOW}Installing Homebrew packages...${NORMAL}\n"
+PACKAGES=(
+  go
+  jq
+  tree
+  watchman
+  zsh
+  zsh-completions
+  zsh-syntax-highlighting
+)
+brew install ${PACKAGES[@]}
+printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
+
+
+# Install Homebrew Cask
+printf "\n${YELLOW}Installing Homebrew Cask...${NORMAL}\n"
+brew tap homebrew/cask
+
+
+# Installing applications via Homebrew cask
+printf "\n${YELLOW}Installing applications via Homebrew cask...${NORMAL}\n"
+CASK_PACKAGES=(
+  appcleaner
+  brave-browser
+  clipy
+  cocoapods
+  docker
+  figma
+  google-chrome
+  google-earth-pro
+  hyper
+  libreoffice
+  macpass
+  pgadmin4
+  postman
+  powerphotos
+  rectangle
+  visual-studio-code
+  ytmdesktop-youtube-music
+  zoom
+)
+brew install ${CASK_PACKAGES[@]} --cask
+printf "\n${GREEN}Applications via Homebrew cask installed!${NORMAL}\n"
+
+
+# Install some fonts
+printf "\n${YELLOW}Installing some fonts...${NORMAL}\n"
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+brew install font-hack-nerd-font
+brew install font-meslo-lg-nerd-font
+
+
+# Clean it up
+printf "\n${YELLOW}Cleaning up homebrew things...${NORMAL}\n"
+brew cleanup
