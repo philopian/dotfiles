@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 export $(grep -v '^#' .colors | xargs)
 

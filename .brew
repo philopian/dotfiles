@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 export $(grep -v '^#' .colors | xargs)
 
@@ -15,6 +15,10 @@ brew update
 printf "\n${GREEN}Homebrew installed and up to date!${NORMAL}\n"
 
 
+
+# tap
+brew tap aws/tap
+
 # Installing packages from brew
 printf "\n${YELLOW}Installing Homebrew packages...${NORMAL}\n"
 PACKAGES=(
@@ -25,6 +29,8 @@ PACKAGES=(
   zsh
   zsh-completions
   zsh-syntax-highlighting
+  warrensbox/tap/tfswitch
+  aws-sam-cli
 )
 brew install ${PACKAGES[@]}
 printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
@@ -56,6 +62,7 @@ CASK_PACKAGES=(
   visual-studio-code
   ytmdesktop-youtube-music
   zoom
+  qgis
 )
 brew install ${CASK_PACKAGES[@]} --cask
 printf "\n${GREEN}Applications via Homebrew cask installed!${NORMAL}\n"
