@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 export $(grep -v '^#' .colors | xargs)
 
@@ -24,5 +24,7 @@ if test $(which code); then
   done < "$filename"
 fi
 
+zsh ./.brew
+zsh ./.shell
 
 source ~/.zshrc
