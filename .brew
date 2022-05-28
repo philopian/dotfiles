@@ -74,7 +74,8 @@ brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 brew install font-hack-nerd-font
 brew install font-meslo-lg-nerd-font
-
+brew tap homebrew/cask-versions
+brew install --cask google-chrome-canary
 
 # Clean it up
 printf "\n${YELLOW}Cleaning up homebrew things...${NORMAL}\n"
