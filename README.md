@@ -1,8 +1,10 @@
 # Dotfiles
 
 ## Overview
+
 <details>
 <summary>Homebrew Packages</summary>
+
   - golang
   - jq
   - tree
@@ -26,8 +28,11 @@
   - visual-studio-code
 </details>
 
+
+
 <details>
 <summary>Optional Homebrew Packages</summary>
+
   - google-earth-pro
   - libreoffice
   - macpass
@@ -38,6 +43,8 @@
 </details>
 
 
+
+
 <details>
 <summary>Shell setup</summary>
 
@@ -45,6 +52,9 @@
 - Oh-my-zsh
 - Set default git branch to `main`
 </details>
+
+
+
 
 
 
