@@ -3,6 +3,10 @@
 
 # # ~/.macos — https://mths.be/macos
 
+
+# # Mission Control prevent 
+# Go to System Preferences -> Mission Control and uncheck: "When switching to an application, switch to a Space with open windows for the application"
+
 # # Close any open System Preferences panes, to prevent them from overriding
 # # settings we’re about to change
 # osascript -e 'tell application "System Preferences" to quit'
@@ -226,7 +230,8 @@
 # defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
+# defaults write com.apple.screencapture location -string "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/SCREENSHOTS"
 
 # # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "jpg"

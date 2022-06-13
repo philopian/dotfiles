@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ../configs/.colors | xargs)
 
 
 # *NOTE: Since Go 1.5+ removed the C compiliers from the toolchain & replaced them with one written in Go, you need to have Go installed in order to insall GVM on your machine
@@ -40,6 +40,5 @@ gvm use go1.17.8 --default
 go version
 gvm list
 
-
-
-# source ~/.zshrc
+# Reload settings
+source ~/.zshrc

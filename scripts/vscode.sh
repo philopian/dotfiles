@@ -1,11 +1,6 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
-
-
-# Copy VS Code user settings
-printf "${BLUE}Copying VS Code user settings...${NORMAL}\n\n"
-cp ./vscode/settings.json ~/Library/Application\ Support/Code/User
+export $(grep -v '^#' ../configs/.colors | xargs)
 
 # Install vscode extensions from the list in extensions.txt
 printf "${BLUE}Installing VS Code extensions...${NORMAL}\n"
@@ -18,6 +13,3 @@ if test $(which code); then
     sleep 0.5
   done < "$filename"
 fi
-
-
-

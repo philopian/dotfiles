@@ -1,8 +1,9 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ../configs/.colors | xargs)
 
 printf "\n${GREEN}Creating a ~/.nvm folder...${NORMAL}\n"
+cd ~
 mkdir ~/.nvm
 
 

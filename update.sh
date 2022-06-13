@@ -1,30 +1,15 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ./configs/.colors | xargs)
 
 
 printf "\n${YELLOW}==============================================================================
-UPDATING Configs
+UPDATING Homeebrew & shell scripts
 ==============================================================================${NORMAL}\n"
 
 
-printf "${BLUE}Overide ~/.zshrc with ~/dotfiles/zshrc...${NORMAL}\n"
-cp ~/dotfiles/zshrc $HOME/.zshrc
-
-
-# Install vscode extensions from the list in extensions.txt
-printf "${BLUE}Installing VS Code extensions...${NORMAL}\n"
-
-if test $(which code); then
-  filename="./vscode/extensions"
-  while read -r line;
-  do
-    printf "${YELLOW}Installing VS Code extension %s...${NORMAL}\n" "$line"
-    code --install-extension $line > /dev/null
-  done < "$filename"
-fi
-
-zsh ./.brew
-zsh ./.shell
+zsh ./scripts/vscode.sh
+zsh ./scripts/brew.sh
+zsh ./scripts/shell.sh
 
 source ~/.zshrc

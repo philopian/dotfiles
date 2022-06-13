@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ../configs/.colors | xargs)
 
 # Install Homebrew (if not already installed)
 if test ! $(which brew); then
@@ -51,18 +51,11 @@ CASK_PACKAGES=(
   docker
   figma
   google-chrome
-  google-earth-pro
   hyper
-  libreoffice
-  macpass
   pgadmin4
   postman
-  powerphotos
   rectangle
   visual-studio-code
-  ytmdesktop-youtube-music
-  zoom
-  qgis
 )
 brew install ${CASK_PACKAGES[@]} --cask
 printf "\n${GREEN}Applications via Homebrew cask installed!${NORMAL}\n"

@@ -1,9 +1,15 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ../configs/.colors | xargs)
+export $(grep -v '^#' ../configs/.git-user | xargs)
 
 # Make main the default branch for git
 printf "\n${YELLOW}Make main the default branch for git...${NORMAL}\n"
+
+
+# Setup git profile
+git config --global user.name $GIT_USER_NAME
+git config --global user.email $GIT_USER_EMAIL
 git config --global init.defaultBranch main
 
 
@@ -23,11 +29,12 @@ cd ~/dotfiles
 sudo chmod -R 755 ~/.oh-my-zsh
 
 
-# links
-cp ~/dotfiles/zshrc $HOME/.zshrc
-ln -sf ~/dotfiles/.zsh_aliases $HOME/.zsh_aliases
-ln -sf ~/dotfiles/.zsh_functions $HOME/.zsh_functions
+# links 
+ln -sf ~/dotfiles/shell/.zshrc $HOME/.zshrc
+ln -sf ~/dotfiles/shell/.zsh_aliases $HOME/.zsh_aliases
+ln -sf ~/dotfiles/shell/.zsh_functions $HOME/.zsh_functions
 
 
-git config --global user.email "philopian@gmail.com"
-git config --global user.name "Phil Willis"
+# Update hyper config
+if [[ -a $HOME/.hyper.js ]]; then rm $HOME/.hyper.js; fi
+ln ~/dotfiles/configs/.hyper.js $HOME/.hyper.js 

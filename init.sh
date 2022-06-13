@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export $(grep -v '^#' .colors | xargs)
+export $(grep -v '^#' ./configs/.colors | xargs)
 
 
 printf "\n${WHITE}==============================================================================
@@ -15,10 +15,12 @@ xcode-select --install
 printf "\n${YELLOW}Installing home-brew...${NORMAL}\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-zsh ./.brew
-zsh ./.shell
-zsh ./.nodejs
-zsh ./.vscode
-zsh ./.open-dl-links
+zsh ./scripts/brew.sh
+zsh ./scripts/shell.sh
+zsh ./scripts/nodejs.sh
+zsh ./scripts/vscode-settings.sh
+zsh ./scripts/vscode.sh
+zsh ./scripts/golang.sh
+zsh ./scripts/open-dl-links.sh
 
 printf "\n${BLUE}All DONE!${NORMAL}\n"

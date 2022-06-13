@@ -103,12 +103,15 @@
     $ cd ~
     $ git clone https://github.com/philopian/dotfiles.git
     ```
-  
-2. Run software updates
+2. Update the `configs/.git-user` with your username/email
+3. Run software updates
   - Make sure that everything is up to date
-3. Run the `init.sh` script
+4. Run the `init.sh` script
 
 
-## Update
+## Optional homebrew installs
+ - Run the `update.sh` script
+
+## Update (shell, homebrew & vscode)
  - Run the `update.sh` script
 
