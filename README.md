@@ -3,34 +3,39 @@
 ## Overview
 <details>
 <summary>Homebrew Packages</summary>
-
-- go
-- jq
-- tree
-- watchman
-- zsh
-- zsh-completions
-- zsh-syntax-highlighting
-- appcleaner
-- brave-browser
-- clipy
-- cocoapods
-- docker
-- figma
-- google-chrome
-- google-earth-pro
-- hyper
-- libreoffice
-- macpass
-- pgadmin4
-- postman
-- powerphotos
-- rectangle
-- visual-studio-code
-- ytmdesktop-youtube-music
-- zoom
+  - golang
+  - jq
+  - tree
+  - watchman
+  - zsh
+  - zsh-completions
+  - zsh-syntax-highlighting
+  - warrensbox/tap/tfswitch
+  - aws-sam-cli
+  - appcleaner
+  - brave-browser
+  - clipy
+  - cocoapods
+  - docker
+  - figma
+  - google-chrome
+  - hyper
+  - pgadmin4
+  - postman
+  - rectangle
+  - visual-studio-code
 </details>
 
+<details>
+<summary>Optional Homebrew Packages</summary>
+  - google-earth-pro
+  - libreoffice
+  - macpass
+  - powerphotos
+  - qgis
+  - ytmdesktop-youtube-music
+  - zoom
+</details>
 
 
 <details>
@@ -81,10 +86,16 @@
 
 
 ## Initial setup
-1. Run software updates
+1. Clone this repo to your root directory
+  - [Manually](https://github.com/philopian/dotfiles/archive/refs/heads/main.zip)
+  - If you have Git already installed:
+    ```
+    $ cd ~
+    $ git clone https://github.com/philopian/dotfiles.git
+    ```
+  
+2. Run software updates
   - Make sure that everything is up to date
-2. Install Xcode
-  - Install Xcode with thee Apple App Store
 3. Run the `init.sh` script
 
 
