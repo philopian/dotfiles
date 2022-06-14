@@ -1,4 +1,11 @@
-alias source="source ~/.zshrc"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../../"
+alias ~="cd ~"
+
+alias dl="cd ~/Downloads"
+alias docs="cd ~/Documents"
+
 alias ll="ls -lah"
 alias cc="clear"
 alias cwd="pwd | tr -d '\n' | pbcopy"
