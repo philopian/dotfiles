@@ -1,3 +1,4 @@
+alias source="source ~/.zshrc"
 alias ll="ls -lah"
 alias cc="clear"
 alias cwd="pwd | tr -d '\n' | pbcopy"
