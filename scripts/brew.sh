@@ -30,7 +30,6 @@ PACKAGES=(
   zsh-completions
   zsh-syntax-highlighting
   warrensbox/tap/tfswitch
-  aws-sam-cli
 )
 brew install ${PACKAGES[@]}
 printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
@@ -39,7 +38,6 @@ printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
 # Install Homebrew Cask
 printf "\n${YELLOW}Installing Homebrew Cask...${NORMAL}\n"
 brew tap homebrew/cask
-
 
 # Installing applications via Homebrew cask
 printf "\n${YELLOW}Installing applications via Homebrew cask...${NORMAL}\n"

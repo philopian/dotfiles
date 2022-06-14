@@ -4,12 +4,11 @@ export $(grep -v '^#' ./config/.colors | xargs)
 
 
 printf "\n${YELLOW}==============================================================================
-UPDATING Homeebrew & shell scripts
+UPDATING Homebrew & shell scripts
 ==============================================================================${NORMAL}\n"
 
 
 zsh ./scripts/vscode.sh
 zsh ./scripts/brew.sh
-zsh ./scripts/shell.sh
-
+zsh ./scripts/macos.sh
 source ~/.zshrc

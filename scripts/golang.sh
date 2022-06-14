@@ -5,7 +5,7 @@ export $(grep -v '^#' ./config/.colors | xargs)
 
 # *NOTE: Since Go 1.5+ removed the C compiliers from the toolchain & replaced them with one written in Go, you need to have Go installed in order to insall GVM on your machine
 
-printf "\n${GREEN}Setting up Golang...${NORMAL}\n"
+printf "\n${YELLOW}Setting up Golang...${NORMAL}\n"
 
 # Check to see if go is already installed
 if ! command -v go >/dev/null; then
@@ -13,7 +13,7 @@ if ! command -v go >/dev/null; then
   brew update && brew install go
 fi
 
-printf "\n${YELLOW}Create go directories...${NORMAL}\n"
+printf "\n${GREEN}Create go directories...${NORMAL}\n"
 mkdir -p $HOME/go/{bin,src,pkg}
 
 
@@ -39,6 +39,9 @@ gvm install go1.17.8
 gvm use go1.17.8 --default
 go version
 gvm list
+
+
+printf "\n${GREEN}Golang installed${NORMAL}\n"
 
 # Reload settings
 source ~/.zshrc

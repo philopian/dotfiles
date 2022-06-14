@@ -16,5 +16,9 @@ zsh ./scripts/vscode-settings.sh
 zsh ./scripts/vscode.sh
 zsh ./scripts/golang.sh
 zsh ./scripts/open-dl-links.sh
+zsh ./scripts/macos.sh
+zsh ./scripts/cloud.sh
+
+source ~/.zshrc
 
 printf "\n${BLUE}All DONE!${NORMAL}\n"

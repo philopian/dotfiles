@@ -3,7 +3,7 @@
 export $(grep -v '^#' ./config/.colors | xargs)
 
 # Install vscode extensions from the list in extensions.txt
-printf "${BLUE}Installing VS Code extensions...${NORMAL}\n"
+printf "${YELLOW}Installing VS Code extensions...${NORMAL}\n"
 if test $(which code); then
   filename="./vscode/extensions"
   while read -r line;
@@ -13,3 +13,5 @@ if test $(which code); then
     sleep 0.5
   done < "$filename"
 fi
+
+printf "\n${GREEN}VSCode installed${NORMAL}\n"

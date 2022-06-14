@@ -13,7 +13,6 @@
   - zsh-completions
   - zsh-syntax-highlighting
   - warrensbox/tap/tfswitch
-  - aws-sam-cli
   - appcleaner
   - brave-browser
   - clipy
@@ -44,17 +43,14 @@
 
 
 
-
 <details>
 <summary>Shell setup</summary>
 
+- Git setup (`main` as default branch, username/email)
 - Use the zsh shell
 - Oh-my-zsh
-- Set default git branch to `main`
+- Symlink `.zshrc`, `.zsh_aliases`, `.zsh_functions`
 </details>
-
-
-
 
 
 
@@ -87,6 +83,15 @@
 
 
 
+<details>
+<summary>Cloud Services</summary>
+
+- AWS CLI & AWS SAM CLI
+- Google GCP CLI
+- Azure CLI
+</details>
+
+
 
 
 
@@ -110,8 +115,8 @@
 
 
 ## Optional homebrew installs
- - Run the `update.sh` script
+ - Run the `optional.sh` script
 
-## Update (shell, homebrew & vscode)
+## Update (homebrew & vscode)
  - Run the `update.sh` script
 

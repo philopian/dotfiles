@@ -33,8 +33,12 @@ sudo chmod -R 755 ~/.oh-my-zsh
 ln -sf ~/dotfiles/shell/.zshrc $HOME/.zshrc
 ln -sf ~/dotfiles/shell/.zsh_aliases $HOME/.zsh_aliases
 ln -sf ~/dotfiles/shell/.zsh_functions $HOME/.zsh_functions
+ln -sf ~/dotfiles/shell/.zsh_work_aliases $HOME/.zsh_work_aliases
 
 
 # Update hyper config
 if [[ -a $HOME/.hyper.js ]]; then rm $HOME/.hyper.js; fi
 ln ~/dotfiles/config/.hyper.js $HOME/.hyper.js 
+
+
+printf "\n${GREEN}Shell settings configured${NORMAL}\n"
