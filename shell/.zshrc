@@ -7,6 +7,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 if [[ -a ~/.zsh_aliases ]]; then source ~/.zsh_aliases; fi
 if [[ -a ~/.zsh_functions ]]; then source ~/.zsh_functions; fi
+if [[ -a ~/.zsh_work ]]; then source ~/.zsh_work; fi
 
 # vscode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -21,3 +22,5 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
