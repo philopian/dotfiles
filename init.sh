@@ -7,14 +7,8 @@ printf "\n${WHITE}==============================================================
 SETTING UP YOUR COMPUTER!
 ==============================================================================${NORMAL}\n"
 
-# Install XCode Command Line Tools
-printf "\n${YELLOW}Installing XCode Command Line Tools...${NORMAL}\n"
-xcode-select --install
-
-# Install Homebrew and its packages
-printf "\n${YELLOW}Installing home-brew...${NORMAL}\n"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
+# Run scripts
+zsh ./scripts/xcode-clt.sh
 zsh ./scripts/brew.sh
 zsh ./scripts/shell.sh
 zsh ./scripts/nodejs.sh
