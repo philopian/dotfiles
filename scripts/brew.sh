@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-export $(grep -v '^#' ./configs/.colors | xargs)
+export $(grep -v '^#' ./config/.colors | xargs)
 
 # Install Homebrew (if not already installed)
 if test ! $(which brew); then

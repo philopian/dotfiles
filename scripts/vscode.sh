@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export $(grep -v '^#' ./configs/.colors | xargs)
+export $(grep -v '^#' ./config/.colors | xargs)
 
 # Install vscode extensions from the list in extensions.txt
 printf "${BLUE}Installing VS Code extensions...${NORMAL}\n"

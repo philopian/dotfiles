@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-export $(grep -v '^#' ./configs/.colors | xargs)
-export $(grep -v '^#' ./configs/.git-user | xargs)
+export $(grep -v '^#' ./config/.colors | xargs)
+export $(grep -v '^#' ./config/.git-user | xargs)
 
 # Make main the default branch for git
 printf "\n${YELLOW}Make main the default branch for git...${NORMAL}\n"
@@ -37,4 +37,4 @@ ln -sf ~/dotfiles/shell/.zsh_functions $HOME/.zsh_functions
 
 # Update hyper config
 if [[ -a $HOME/.hyper.js ]]; then rm $HOME/.hyper.js; fi
-ln ~/dotfiles/configs/.hyper.js $HOME/.hyper.js 
+ln ~/dotfiles/config/.hyper.js $HOME/.hyper.js 
