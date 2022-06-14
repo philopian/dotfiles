@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export $(grep -v '^#' ../configs/.colors | xargs)
+export $(grep -v '^#' ./configs/.colors | xargs)
 
 
 # Copy VS Code user settings

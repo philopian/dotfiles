@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-export $(grep -v '^#' ../configs/.colors | xargs)
-export $(grep -v '^#' ../configs/.git-user | xargs)
+export $(grep -v '^#' ./configs/.colors | xargs)
+export $(grep -v '^#' ./configs/.git-user | xargs)
 
 # Make main the default branch for git
 printf "\n${YELLOW}Make main the default branch for git...${NORMAL}\n"
