@@ -7,6 +7,9 @@ printf "\n${WHITE}==============================================================
 SETTING UP YOUR COMPUTER!
 ==============================================================================${NORMAL}\n"
 
+# Create this file so it doesn't get tracked by git
+touch shell/.zsh_work_aliases
+
 # Run scripts
 zsh ./scripts/xcode-clt.sh
 zsh ./scripts/brew.sh
