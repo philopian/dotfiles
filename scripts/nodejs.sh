@@ -9,7 +9,7 @@ mkdir ~/.nvm
 
 # Install NVM
 printf "\n${YELLOW}Installing NVM...${NORMAL}\n"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.1/install.sh | bash
 source ~/.zshrc
 
 nvm install --lts=Erbium # node 12
