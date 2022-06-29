@@ -30,6 +30,7 @@ PACKAGES=(
   zsh-completions
   zsh-syntax-highlighting
   warrensbox/tap/tfswitch
+  act
 )
 brew install ${PACKAGES[@]}
 printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
