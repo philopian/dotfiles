@@ -25,6 +25,15 @@ CASK_PACKAGES=(
   qgis
   ytmdesktop-youtube-music
   zoom
+  handbrake
 )
 brew install ${CASK_PACKAGES[@]} --cask
+
+brew install --cask obsidian
+brew install --cask raycast
+brew install --cask ytmdesktop-youtube-music
+brew install --cask vlc
+brew install --cask framer
 printf "\n${GREEN}Applications via Homebrew cask installed!${NORMAL}\n"
+
+

@@ -12,12 +12,13 @@ printf "\n${YELLOW}Installing NVM...${NORMAL}\n"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.1/install.sh | bash
 source ~/.zshrc
 
-nvm install --lts=Erbium # node 12
-nvm install --lts=Fermium # node 14
 nvm install --lts=Gallium # node 16
-nvm alias default lts/gallium
+nvm install --lts=Iron # node 20
+nvm alias default lts/Iron
 
 npm i -g live-server yarn 
+npm i -g pnpm 
+brew install corepack
 
 printf "\n${GREEN}Nodejs installed${NORMAL}\n"
 

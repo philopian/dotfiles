@@ -13,13 +13,14 @@ touch shell/.zsh_work_aliases
 # Run scripts
 zsh ./scripts/xcode-clt.sh
 zsh ./scripts/brew.sh
+zsh ./scripts/brew-optional.sh
 zsh ./scripts/shell.sh
 zsh ./scripts/nodejs.sh
 zsh ./scripts/vscode-settings.sh
 zsh ./scripts/vscode.sh
 zsh ./scripts/golang.sh
 zsh ./scripts/open-dl-links.sh
-zsh ./scripts/macos.sh
+zsh ./scripts/macos-m1.sh
 zsh ./scripts/cloud.sh
 
 source ~/.zshrc

@@ -12,3 +12,5 @@ printf "\n${GREEN}XCode Command Line Tools installed${NORMAL}\n"
 printf "\n${YELLOW}Installing home-brew...${NORMAL}\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 printf "\n${GREEN}Homebrew installed${NORMAL}\n"
+
+mkdir ~/Developer
