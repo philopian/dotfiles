@@ -31,6 +31,7 @@ PACKAGES=(
   zsh-syntax-highlighting
   warrensbox/tap/tfswitch
   act
+  bruno
 )
 brew install ${PACKAGES[@]}
 printf "\n${GREEN}Homebrew packages installed!${NORMAL}\n"
@@ -55,6 +56,7 @@ CASK_PACKAGES=(
   postman
   rectangle
   visual-studio-code
+  ghostty
 )
 brew install ${CASK_PACKAGES[@]} --cask
 printf "\n${GREEN}Applications via Homebrew cask installed!${NORMAL}\n"

@@ -31,3 +31,5 @@ alias npmlsl='npm list -g --depth=0 --link=true'
 
 alias cra="npx create-react-app "
 alias next="npx create-next-app "
+
+alias python="python3 "
