@@ -28,8 +28,10 @@ alias aws-local='aws --endpoint-url=http://localhost:4566'
 alias npmlsg='npm list -g --depth=0'
 alias npmg='npm list -g --depth=0'
 alias npmlsl='npm list -g --depth=0 --link=true'
+alias password='function _password() { local len=${1:-16}; node -e "console.log(require(\"crypto\").randomBytes($len).toString(\"hex\"))" | pbcopy; echo "[Success] Password generated and copied to clipboard"; }; _password'
 
 alias cra="npx create-react-app "
 alias next="npx create-next-app "
 
 alias python="python3 "
+
